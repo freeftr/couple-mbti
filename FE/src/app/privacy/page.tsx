@@ -115,7 +115,7 @@ export default function PrivacyPage() {
         </div>
 
         <p className="text-center text-sm text-gray-500 mt-6">
-          © 2024 커플 궁합 테스트. All rights reserved.
+          © 2026 커플 궁합 테스트. All rights reserved.
         </p>
       </div>
     </div>
