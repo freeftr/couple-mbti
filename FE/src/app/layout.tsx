@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -24,9 +25,37 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={inter.className}>
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <div className="flex min-h-screen">
+          <aside className="hidden lg:flex items-start pt-8 pl-4 shrink-0 w-[180px]">
+            <div className="sticky top-8">
+              <ins
+                className="kakao_ad_area"
+                style={{ display: 'none' }}
+                data-ad-unit="DAN-p0h7DLWDVjYmpKqU"
+                data-ad-width="160"
+                data-ad-height="600"
+              />
+            </div>
+          </aside>
+          <main className="flex-1 min-h-screen">
+            {children}
+          </main>
+          <aside className="hidden lg:flex items-start pt-8 pr-4 shrink-0 w-[180px]">
+            <div className="sticky top-8">
+              <ins
+                className="kakao_ad_area"
+                style={{ display: 'none' }}
+                data-ad-unit="DAN-mErGjZG9UDaiAHEj"
+                data-ad-width="160"
+                data-ad-height="600"
+              />
+            </div>
+          </aside>
+        </div>
+        <Script
+          src="//t1.daumcdn.net/kas/static/ba.min.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
