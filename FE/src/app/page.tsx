@@ -62,6 +62,12 @@ export default function Home() {
         <p className="mt-8 text-sm text-gray-500">
           총 20개의 질문으로 구성되어 있어요
         </p>
+
+        <div className="mt-4 text-xs text-gray-400">
+          <Link href="/privacy" className="hover:text-gray-600 underline">
+            개인정보처리방침
+          </Link>
+        </div>
       </div>
     </div>
   )
